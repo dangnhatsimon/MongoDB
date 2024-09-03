@@ -8,8 +8,8 @@ from pymongo import MongoClient
 from bson.objectid import ObjectId
 
 # Load config from .env file
-load_dotenv()
-MONGODB_URI = os.environ["MONGODB_URI"]
+load_dotenv(dotenv_path="D:/NoSQL/MongoDBU/.env")
+MONGODB_URI = os.getenv("MONGODB_URI")
 
 # Connect to MongoDB cluster with MongoClient
 client = MongoClient(MONGODB_URI)
